@@ -1,0 +1,10 @@
+﻿@model CityWeather
+
+<div class="container">
+    <div id="weather-box" class="box">
+        <div id="city" class="city">@Model.CityName</div>
+        <div id="date-time" class="date-time">@Model.DateAndTime.ToString("dd MMM yyyy | HH:mm")</div>
+        <div id="temperature" class="temperature">@Model.TemperatureFahrenheit°F</div>
+        <a href="/weather" class="link">Back</a>
+    </div>
+</div>

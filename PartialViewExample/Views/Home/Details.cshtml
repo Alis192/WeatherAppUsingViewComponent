@@ -1,0 +1,14 @@
+﻿@model CityWeather
+
+@await Component.InvokeAsync("Details", new {
+    city = Model 
+}) @*In this view we invoke Details ViewComponent.*@
+@*<vc:details city="@Model"></vc:details>*@
+
+@*Both ways are applicable to invoke View Component*@
+
+
+
+
+
+@*This view is rendered when request is made to Details() action method*@

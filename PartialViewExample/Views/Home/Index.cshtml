@@ -1,0 +1,27 @@
+﻿@model IEnumerable<CityWeather>
+
+<!DOCTYPE html>
+<html>
+<body>
+    <div class="container">
+        @foreach (CityWeather city in Model)
+        {
+            <div class="box">
+                <div class="city">@city.CityName</div>
+                <div class="date-time">@city.DateAndTime.ToString("HH:mm")</div>
+                <div class="temperature">@city.TemperatureFahrenheit°F</div>
+                <div class="link">
+                    <a href="/weather/@city.CityUniqueCode">Details</a>
+                </div>
+            </div>
+        }
+
+    </div>
+</body>
+</html>
+
+
+@*We show list of cities which are passed from our 'HomeController'
+*@
+
+@*When User Clicks <a></a> tag it makes a request to our Home controller to invoke Details action method*@
